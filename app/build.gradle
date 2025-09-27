@@ -1,0 +1,94 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+apply from: "thingMapping.gradle"
+
+android {
+    namespace 'test.emco.app'
+    compileSdk 36
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\dell\\Desktop\\Android_Project\\EMCO\\app\\key_store.jks')
+            storePassword 'emco123'
+            keyAlias 'key0'
+            keyPassword 'emco123'
+        }
+        release {
+            storeFile file('C:\\Users\\dell\\Desktop\\Android_Project\\EMCO\\app\\key_store.jks')
+            storePassword 'emco123'
+            keyAlias 'key0'
+            keyPassword 'emco123'
+        }
+
+    }
+    defaultConfig {
+        applicationId "test.emco.app"
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        manifestPlaceholders = [
+                TUYA_SMART_APPKEY: "${properties.getProperty("appKey")}",
+                TUYA_SMART_SECRET: "${properties.getProperty("appSecret")}",
+        ]
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86_64"
+        }
+    }
+    packagingOptions {
+        pickFirst 'lib/*/libc++_shared.so'
+        pickFirst 'lib/*/libyuv.so'
+        pickFirst 'lib/*/libopenh264.so'
+        pickFirst 'lib/*/liblog.so'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+configurations.all {
+    exclude group: "com.thingclips.smart", module: 'thingsmart-modularCampAnno'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation 'com.thingclips.smart:thingsmart:6.7.3'
+    implementation 'com.thingclips.smart:thingsmart-ipcsdk:6.7.0'
+    implementation 'com.alibaba:fastjson:2.0.59'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:5.1.0'
+    implementation 'com.github.bumptech.glide:glide:5.0.5'
+    annotationProcessor 'com.github.bumptech.glide:compiler:5.0.5'
+    implementation 'com.squareup.retrofit2:retrofit:3.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:3.0.0'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'com.thingclips.smart:thingsmart-ipc-camera-autotest:5.0.0'
+    implementation 'com.thingclips.smart:thingsmart-ipc-camera-cloudtool:5.0.0'
+    //timeline view
+    implementation 'com.thingclips.smart:thingsmart-ipc-camera-timeline:1.1.0'
+    // offline log
+    implementation 'com.thingclips.smart:thingsmart-logsdk:5.0.0'
+    implementation 'com.thingclips.smart:thing-log-sdk:5.0.0'
+}

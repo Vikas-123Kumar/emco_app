@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fireman"
+        android:fitsSystemWindows="true"
+        tools:context=".screens.ActivityAskLoginSignUp">
+
+        <TextView
+            android:id="@+id/txt_stay_ahead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:text="@string/stay_ahead_of_fire_risks"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_26dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_stay_ahead"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:text="@string/monitor_detect_and_act_before_hazards_turn_into_n_emergencies"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_50dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_40dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:background="@drawable/button_login"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginStart="@dimen/_40dp"
+                android:layout_marginEnd="@dimen/_40dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

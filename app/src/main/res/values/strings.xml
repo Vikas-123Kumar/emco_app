@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EMCO</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="continuesignup">Continue</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="verify_account">Verify Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="stay_ahead_of_fire_risks">Stay Ahead of Fire Risks</string>
+    <string name="monitor_detect_and_act_before_hazards_turn_into_n_emergencies">Monitor, detect and act before hazards turn into \nemergencies</string>
+    <string name="please_check_your_internet_connection">Please check your internet connection.</string>
+    <string name="please_check_your_mail">"Please check your mail "</string>
+    <string name="we_send_you_the_verification_code">. We send you the verification code.</string>
+    <string name="set_new_password">Set New Password</string>
+</resources>
