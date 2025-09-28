@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout >
+<layout>
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:background="@drawable/all_backgroun"
+        android:fitsSystemWindows="true"
         tools:context=".screens.ActivityHome">
 
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNav" />
+
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20dp"
+            android:background="#000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Repeat this layout for each item -->
+            <include layout="@layout/bottom_nav_item" />
+
+            <include layout="@layout/bottom_nav_item" />
+
+            <include layout="@layout/bottom_nav_item" />
+
+            <include layout="@layout/bottom_nav_item" />
+
+        </LinearLayout>
     </RelativeLayout>
 </layout>

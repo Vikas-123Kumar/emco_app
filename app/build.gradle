@@ -91,4 +91,9 @@ dependencies {
     // offline log
     implementation 'com.thingclips.smart:thingsmart-logsdk:5.0.0'
     implementation 'com.thingclips.smart:thing-log-sdk:5.0.0'
+    implementation "com.facebook.fresco:fresco:3.6.0"
+
+    implementation project(':base_res')
+    implementation project(":device_config")
+    implementation project(":ipc")
 }

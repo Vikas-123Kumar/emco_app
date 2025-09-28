@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/aether_home"
+        android:title="@string/home">
+
+    </item>
+    <item
+        android:id="@+id/schedule"
+        android:title="@string/schedule">
+
+    </item>
+
+    <item
+        android:id="@+id/error"
+        android:icon="@drawable/error"
+        android:title="@string/error">
+
+    </item>
+    <item
+        android:id="@+id/profile"
+        android:title="@string/me">
+
+    </item>
+
+</menu>

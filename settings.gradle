@@ -41,3 +41,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "EMCO"
 include ':app'
+include ':ipc'
+include ':base_res'
+include ':device_config'

@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#BF1E2E</color>
     <color name="ask_login">#2A0000</color>
+    <color name="unselect_bottom_nav">#7A798A</color>
+    <color name="hint_color">#70ffffff</color>
+    <color name="_FF8D8D1A">#50FF8D8D</color>
 </resources>

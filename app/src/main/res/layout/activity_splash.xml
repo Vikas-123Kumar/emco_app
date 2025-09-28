@@ -8,9 +8,10 @@
     android:fitsSystemWindows="true"
     android:background="@color/red"
     tools:context=".ActivitySplash">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_centerVertical="true"
-    android:src="@drawable/splash_emco"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/splash_emco" />
 </RelativeLayout>

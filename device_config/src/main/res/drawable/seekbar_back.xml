@@ -1,0 +1,21 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Unselected track (background) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="4dp"/>
+            <size android:height="8dp"/> <!-- Increased thickness -->
+            <solid android:color="#CCCCCC"/>
+        </shape>
+    </item>
+
+    <!-- Selected track (progress) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="4dp"/>
+                <size android:height="8dp"/> <!-- Increased thickness -->
+                <solid android:color="#12306b"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

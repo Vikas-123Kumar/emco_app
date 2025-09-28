@@ -18,4 +18,16 @@
     <string name="please_check_your_mail">"Please check your mail "</string>
     <string name="we_send_you_the_verification_code">. We send you the verification code.</string>
     <string name="set_new_password">Set New Password</string>
+    <string name="system_s_status">System’s Status</string>
+    <string name="devices">Devices</string>
+    <string name="total">Total</string>
+    <string name="connected">Connected</string>
+    <string name="offline">Offline</string>
+    <string name="pressure">Pressure</string>
+    <string name="flow_rate">Flow Rate</string>
+    <string name="front_zone">Front Zone</string>
+    <string name="auto_soak">Auto-Soak</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="stop">Stop</string>
 </resources>
